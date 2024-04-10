@@ -1,4 +1,4 @@
-import db from './db'
+/*import db from './db'
 
 export default async function getItem(id) {
   const item = await db.child('item').child(id).once('value')
@@ -30,4 +30,28 @@ export function transform(val) {
     score: val.score,
     title: val.title,
   }
+}
+
+*/
+import prisma from './db';  // Assuming db.ts exports the Prisma client instance
+
+// Function to get an item by id from the database
+export async function getItem(id: number | string) {
+  const item = await prisma.item.findUnique({  // Assuming 'item' is your model name
+    where: { id: Number(id) },
+  });
+  if (item) {
+    return transform(item);
+  } else {
+    return null;
+  }
+}
+
+// Function to transform the database record into the desired format
+export function transform(val: any) {
+  // Assuming 'headline' and 'summary' are the fields you want from your database record
+  return {
+    headline: val.title, // or val.headline if you have a headline field
+    summary: val.text,  // or val.summary or any other field as per your DB schema
+  };
 }
