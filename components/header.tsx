@@ -11,7 +11,7 @@ export default function Header() {
             <span className="logo">
               <Logo />
             </span>
-            <span className="title">Hacker Next</span>
+            <span className="title">GORT</span>
           </a>
         </Link>
         <div className="nav">
