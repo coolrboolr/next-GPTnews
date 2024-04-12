@@ -47,13 +47,6 @@ export async function getItem(id: number | string) {
   }
 }
 
-export function observe(id, fn) {
-  const onval = (data) => fn(transform(data.val()))
-  const item = db.child('item').child(id)
-  item.on('value', onval)
-  return () => item.off('value', onval)
-}
-
 // Function to transform the database record into the desired format
 export function transform(val: any) {
   // Assuming 'headline' and 'summary' are the fields you want from your database record
