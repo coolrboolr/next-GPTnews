@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -15,14 +15,13 @@
     "ms": "^2.1.3",
     "next": "canary",
     "nprogress": "^0.2.0",
-    "prisma": "^5.12.1",
     "react": "^18.2.0",
     "react-dom": "latest",
     "url-parse": "^1.5.10"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
-    "@types/react": "latest",
+    "@types/react": "^18.2.77",
     "eslint": "^8.36.0",
     "eslint-config-next": "canary",
     "prisma": "^5.12.1",

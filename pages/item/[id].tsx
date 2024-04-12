@@ -1,7 +1,6 @@
 import Page from '../../components/page'
 import Item from '../../components/item'
-import getItem from '../../lib/get-item'
-import getComments from '../../lib/get-comments'
+import { getItem } from '../../lib/get-item'
 import { useEffect, useState } from 'react'
 
 export function getStaticPaths() {
@@ -20,6 +19,16 @@ export async function getStaticProps({ params: { id } }) {
   }
 }
 
+// Render the story using the Item component
+export default function ItemPage({ story }) {
+  return (
+    <Page>
+      <Item story={story} />
+    </Page>
+  );
+}
+
+/* [NOTE] I don't think we need this??
 export default function ItemPage({ story }) {
   console.log('story', story)
   const [comments, setComments] = useState([])
@@ -73,3 +82,5 @@ export default function ItemPage({ story }) {
     </Page>
   );
 }
+
+*/

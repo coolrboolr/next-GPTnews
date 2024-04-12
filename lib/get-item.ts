@@ -37,7 +37,7 @@ import prisma from './db';  // Assuming db.ts exports the Prisma client instance
 
 // Function to get an item by id from the database
 export async function getItem(id: number | string) {
-  const item = await prisma.Article.findUnique({  // Assuming 'item' is your model name
+  const item = await prisma.article.findUnique({  // Assuming 'item' is your model name
     where: { id: Number(id) },
   });
   if (item) {

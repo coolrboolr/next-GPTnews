@@ -1,23 +1,9 @@
 import Page from '../components/page'
 import Story from '../components/story'
-import Comment from '../components/comment'
-import CommentForm from '../components/comment-form'
 
 const Item = ({ story, comments = null }) => (
   <div className="item">
     <Story {...story} />
-
-    <div className="form">
-      <CommentForm />
-    </div>
-
-    <div className="comments">
-      {comments ? (
-        comments.map((comment) => <Comment key={comment.id} {...comment} />)
-      ) : (
-        <div className="loading">Loading…</div>
-      )}
-    </div>
 
     <style jsx>{`
       .item {
