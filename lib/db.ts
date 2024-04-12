@@ -21,7 +21,7 @@ export default root
 import { PrismaClient } from '@prisma/client';
 
 
-/*
+
 let prisma: PrismaClient;
 
 if (process.env.NODE_ENV === 'production') {
@@ -35,8 +35,4 @@ if (process.env.NODE_ENV === 'production') {
   }
   prisma = (global as any).prisma;
 }
-*/
-
-const prisma = new PrismaClient();
-
 export default prisma;
