@@ -4,10 +4,8 @@ export default function Nav() {
   return (
     <ul>
       <Item href="/newest">new</Item>
-      <Item href="/bbc_world">bbc_world</Item>
-      <Item href="/bbc_business">bbc_business</Item>
-      <Item href="/ask">ask</Item>
-      <Item href="/submit">submit</Item>
+      <Item href="/bbc_world">bbc world news</Item>
+      <Item href="/bbc_business">bbc business news</Item>
 
       <style jsx>{`
         ul {
