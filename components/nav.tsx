@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Nav() {
   return (
     <ul>
-      <Item href="/newest">new</Item>
+      <Item href="/newest">reddit world news</Item>
       <Item href="/bbc_world">bbc world news</Item>
       <Item href="/bbc_business">bbc business news</Item>
 
