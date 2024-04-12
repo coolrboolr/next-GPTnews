@@ -33,6 +33,7 @@ export function transform(val) {
 }
 
 */
+import { transformSync } from 'next/dist/build/swc';
 import prisma from './db';  // Assuming db.ts exports the Prisma client instance
 
 // Function to get an item by id from the database
