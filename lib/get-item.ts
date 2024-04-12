@@ -47,20 +47,6 @@ export async function getItem(id: number | string) {
   }
 }
 
-export function observe(id, fn) {
-  const onval = (data) => fn(transform(data.val()))
-<<<<<<< HEAD
-  const item = prisma.Article.findUnique({  // Assuming 'item' is your model name
-    where: { id: Number(id) },
-  });
-=======
-  const item = prisma.item.findUnique({  // Assuming 'item' is your model name
-    where: { id: Number(id) },})
->>>>>>> e3c53ba378510fe9ab9e142c3c7384e52337a645
-  item.on('value', onval)
-  return () => item.off('value', onval)
-}
-
 // Function to transform the database record into the desired format
 export function transform(val: any) {
   // Assuming 'headline' and 'summary' are the fields you want from your database record
