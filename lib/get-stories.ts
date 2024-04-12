@@ -29,7 +29,7 @@ export default async function getStories(
   const start = (page - 1) * max;
 
   // Fetch story IDs based on type and paginate using skip and take
-  const storyData = await prisma.story.findMany({
+  const storyData = await prisma.Article.findMany({
     where: { category }, // Adjust 'type' field based on your schema's actual field name
     skip: start,
     take: max,

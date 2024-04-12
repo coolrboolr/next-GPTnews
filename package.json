@@ -16,7 +16,7 @@
     "next": "canary",
     "nprogress": "^0.2.0",
     "prisma": "^5.12.1",
-    "react": "latest",
+    "react": "^18.2.0",
     "react-dom": "latest",
     "url-parse": "^1.5.10"
   },

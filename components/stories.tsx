@@ -1,4 +1,4 @@
-import Story from './updating-story'
+import Story from './story'
 import Link from 'next/link'
 
 const Stories = ({ stories, page = 1, offset = null }) => (
