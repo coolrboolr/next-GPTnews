@@ -1,4 +1,4 @@
-import db from './db'
+import prisma from './db'
 
 // hydrate comments based on an array of item ids
 export default function fetch(ids) {

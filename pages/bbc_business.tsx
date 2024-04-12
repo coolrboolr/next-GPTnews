@@ -3,7 +3,7 @@ import Stories from '../components/stories'
 import getStories from '../lib/get-stories'
 
 export async function getStaticProps() {
-  const stories = await getStories('showstories')
+  const stories = await getStories('bbc_business')
   return { props: { stories }, revalidate: 1 }
 }
 export default function Show({ stories }) {

@@ -41,3 +41,35 @@ export default function ItemPage({ story }) {
     </Page>
   )
 }
+
+
+
+//
+
+export default function ItemPage({ story }) {
+  const [comments, setComments] = useState([])
+
+  useEffect(() => {
+    if (story) {
+      getComments(story.comments)
+        .then((comments) => {
+          setComments(comments)
+        })
+        .catch((err) => {
+          // TODO: handle error
+        });
+    }
+  }, [story]);
+
+  return (
+    <Page>
+      {story.url ? (
+        <a href={story.url} target="_blank" rel="noopener noreferrer">
+          <Item story={story} comments={comments} />
+        </a>
+      ) : (
+        <Item story={story} comments={comments} />
+      )}
+    </Page>
+  );
+}

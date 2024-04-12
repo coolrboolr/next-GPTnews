@@ -18,7 +18,6 @@ const root = firebase.database().ref('v0')
 export default root
 */
 
-
 import { PrismaClient } from '@prisma/client';
 
 let prisma: PrismaClient;
