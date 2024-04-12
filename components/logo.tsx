@@ -1,15 +1,15 @@
 export default function Logo() {
   return (
     <span>
-      N
+      GORT
       <style jsx>{`
         span {
-          border: 1px solid #fff;
+          border: 3px solid #FEF5D6;
           display: inline-block;
-          color: #fff;
+          color: #092B34;
           font-weight: bold;
           font-size: 11px;
-          padding: 5px 8px;
+          padding: 4px 8px;
         }
       `}</style>
     </span>

@@ -11,7 +11,6 @@ export default function Header() {
             <span className="logo">
               <Logo />
             </span>
-            <span className="title">GORT</span>
           </a>
         </Link>
         <div className="nav">
@@ -24,7 +23,7 @@ export default function Header() {
 
       <style jsx>{`
         header {
-          background: #ffa52a;
+          background: #CBCEB3;
           display: flex;
           font-size: 14px;
         }
@@ -49,7 +48,7 @@ export default function Header() {
           font-size: 14px;
           text-decoration: none;
           padding: 8px 10px 8px 4px;
-          color: #000;
+          color: #092B34;
           vertical-align: top;
         }
 
@@ -99,5 +98,5 @@ removing login for now
           <a className="login">login</a>
         </Link>
       </div>
-      
+
 */ 

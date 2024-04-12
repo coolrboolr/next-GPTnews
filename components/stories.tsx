@@ -1,13 +1,13 @@
 import Story from './story'
 import Link from 'next/link'
 
-const Stories = ({ stories, page = 1, offset = null }) => (
+const Stories = ({ stories, page = 1, offset = 0 }) => (
   <div>
     {stories.map((story, i) => (
       <div key={story.id} className="item">
-        {null != offset ? (
+        {
           <span className="count">{i + offset + 1}</span>
-        ) : null}
+        }
         <div className="story">
           <Story {...story} />
         </div>

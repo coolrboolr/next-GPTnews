@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 export async function getStaticProps({ params: { page = 1 } }) {
   page = Number(page)
-  const stories = await getStories('world_news', { page })
+  const stories = await getStories('', { page })
   return {
     props: { page, stories },
     revalidate: 1,
