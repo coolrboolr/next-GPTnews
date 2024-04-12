@@ -18,11 +18,9 @@ export default function Header() {
           <Nav />
         </div>
       </div>
-      <div className="right">
-        <Link href="/login" legacyBehavior>
-          <a className="login">login</a>
-        </Link>
-      </div>
+      
+      
+      
 
       <style jsx>{`
         header {
@@ -91,3 +89,15 @@ export default function Header() {
     </header>
   )
 }
+
+
+/*
+removing login for now
+
+<div className="right">
+        <Link href="/login" legacyBehavior>
+          <a className="login">login</a>
+        </Link>
+      </div>
+      
+*/ 
