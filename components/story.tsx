@@ -2,7 +2,7 @@ import Link from 'next/link'
 import timeAgo from '../lib/time-ago'
 import parse from 'url-parse'
 
-const Story = ({ id, title, date, url, user, score, commentsCount }: any) => {
+const Story = ({ id, title, date, url}: any) => {
   const { host } = parse(url)
   return (
     <div>
@@ -10,36 +10,10 @@ const Story = ({ id, title, date, url, user, score, commentsCount }: any) => {
         {url ? (
           <a href={url}>{title}</a>
         ) : (
-          <Link href={`/item/${id}`} legacyBehavior>
+          <Link href={'url not found'} legacyBehavior>
             <a>{title}</a>
           </Link>
         )}
-        {url && (
-          <span className="source">
-            <a href={`http://${host}`}>{host.replace(/^www\./, '')}</a>
-          </span>
-        )}
-      </div>
-      <div className="meta">
-        {score} {plural(score, 'point')} by{' '}
-        <Link href={`/user?id=${user}`} legacyBehavior>
-          <a>{user}</a>
-        </Link>{' '}
-        <Link href={`/item/${id}`} legacyBehavior>
-          <a>
-            {
-              date &&
-                timeAgo(new Date(date)) /* note: we re-hydrate due to ssr */
-            }{' '}
-            ago
-          </a>
-        </Link>{' '}
-        |{' '}
-        <Link href={`/item/${id}`} legacyBehavior>
-          <a>
-            {commentsCount} {plural(commentsCount, 'comment')}
-          </a>
-        </Link>
       </div>
       <style jsx>{`
         .title {

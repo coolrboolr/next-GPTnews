@@ -51,7 +51,8 @@ export async function getItem(id: number | string) {
 export function transform(val: any) {
   // Assuming 'headline' and 'summary' are the fields you want from your database record
   return {
-    title: val.title, // or val.headline if you have a headline field
+    title: val.headline,
+    url: val.url // or val.headline if you have a headline field
     //summary: val.text,  // TODO: to be added as reroute to chat with app
   };
 }
