@@ -17,6 +17,9 @@ export default async function getStories(
     where: whereCondition, 
     skip: start,
     take: max,
+    orderBy: {
+      id: 'desc',
+    },
   });
 
   // Transform each story object
